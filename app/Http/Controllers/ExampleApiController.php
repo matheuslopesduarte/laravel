@@ -11,7 +11,9 @@ class ExampleApiController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json([
+            'message' => 'Example API response'
+        ]);
     }
 
     /**
@@ -27,7 +29,10 @@ class ExampleApiController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return response()->json([
+            'message' => 'Example API response',
+            'id' => $id
+        ]);
     }
 
     /**

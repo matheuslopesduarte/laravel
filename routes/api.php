@@ -1,8 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
+namespace App\Http\Middleware;
+
+use App\Http\Controllers\ExampleApiController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+Route::apiResource('api', ExampleApiController::class);
+
+
